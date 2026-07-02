@@ -1,8 +1,0 @@
-# the conda-build parameters to use
-build_parameters:
-  - "--suppress-variables"
-  - "--skip-existing"
-  - "--error-overlinking"
-  - "--error-overdepending"
-  # to not expose recipe details of the private recipes
-  - "--no-include-recipe"
