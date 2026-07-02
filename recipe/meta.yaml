@@ -6,9 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  # Private repo: cannot fetch the tarball via the usual public HTTPS GitHub archive URL
-  git_url: https://github.com/anaconda/{{ name }}.git
-  git_tag: v{{ version }}
+  url: https://github.com/anaconda/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: fc095e2528e5ffb7c7fa923da13892ee54db6e18f77b920c930e977e66fe67cb
 
 build:
   number: 0
