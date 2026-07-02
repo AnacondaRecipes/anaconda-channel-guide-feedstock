@@ -7,7 +7,7 @@ package:
 
 source:
   # Private repo: cannot fetch the tarball via the usual public HTTPS GitHub archive URL
-  git_url: https://github.com/anaconda/{{ name }}.git
+  git_url: git@github.com:anaconda/{{ name }}.git
   git_tag: v{{ version }}
 
 build:
@@ -28,6 +28,8 @@ requirements:
     - conda
     - requests
     - anaconda-auth >=0.15.1
+    # Not listed in upstream recipe, but was requested by the maintainer
+    # "It’s a legal dependency, not a technical dependency."
     - conda-anaconda-tos
 
 test:
