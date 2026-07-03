@@ -10,7 +10,7 @@ source:
   sha256: fc095e2528e5ffb7c7fa923da13892ee54db6e18f77b920c930e977e66fe67cb
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -22,7 +22,7 @@ requirements:
     - hatch-vcs >=0.2.0
   run:
     - python
-    - conda
+    - conda >=26.5.0
     - requests
     - anaconda-auth >=0.15.1
     # Not listed in upstream recipe, but was requested by the maintainer
