@@ -1,5 +1,5 @@
 {% set name = "anaconda-channel-guide" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/anaconda/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fc095e2528e5ffb7c7fa923da13892ee54db6e18f77b920c930e977e66fe67cb
+  sha256: f7525e7d983486b679da907794a0d3d87335d08a97c70b6972465ba0a6d5c291
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
