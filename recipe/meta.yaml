@@ -1,5 +1,5 @@
 {% set name = "anaconda-channel-guide" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/anaconda/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f7525e7d983486b679da907794a0d3d87335d08a97c70b6972465ba0a6d5c291
+  sha256: b9689e2767f12f0e5ff21a025754f68e768acf129c151663f0140fd86d7e2dcc
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - hatch-vcs >=0.2.0
   run:
     - python
-    - conda >=26.5.0
+    - conda >=26.7.0
     - requests
     - anaconda-auth >=0.15.1
     # Not listed in upstream recipe, but was requested by the maintainer
